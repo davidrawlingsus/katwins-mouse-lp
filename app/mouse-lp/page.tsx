@@ -101,7 +101,7 @@ function MouseLanding() {
               />
             </div>
           </div>
-          <p className="mouse-natural-diet">KatKin: The next best thing to nature...</p>
+          <p className="mouse-natural-diet">KatKin: The next best thing to natural...</p>
           <div className="mouse-benefits">
             <BenefitPill text="100% real meat + fish" variant="green" size="sm" textSize={BENEFIT_TEXT_SIZE} />
             <BenefitPill text="Zero grains + fillers" variant="green" size="sm" textSize={BENEFIT_TEXT_SIZE} />

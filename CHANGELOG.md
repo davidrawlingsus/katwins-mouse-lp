@@ -89,7 +89,7 @@ They live in `app/mouse-lp/sections/`.
   `mouse-chase-cat-full` / `mouse-chase-mouse-full`. CSS shows one pair or the other at 700px.
 
 ### Copy: "natural diet" bar
-- "KatKin: The next best thing to a natural diet:" → "KatKin: The next best thing to nature..."
+- "KatKin: The next best thing to a natural diet:" → "KatKin: The next best thing to natural..."
 
 ---
 

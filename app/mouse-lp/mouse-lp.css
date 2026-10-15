@@ -1,0 +1,619 @@
+.mouse-page {
+  --mouse-ink: #231f20;
+  --mouse-cream: #f2f4e9;
+  --mouse-sage: #dfe8d3;
+  --mouse-sand: #ddd4bf;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--mouse-cream);
+  color: var(--mouse-ink);
+  font-family:
+    Scto Grotesk A,
+    Arial,
+    sans-serif;
+}
+.mouse-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 48px;
+  padding: 0 18px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(35, 31, 32, 0.12);
+}
+.mouse-nav > a:first-child {
+  grid-column: 2;
+}
+.mouse-nav img {
+  width: auto;
+  height: 31px;
+}
+.mouse-nav > a:last-child {
+  grid-column: 3;
+  justify-self: end;
+  color: var(--mouse-ink);
+  font-family: Greed, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.mouse-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 124px 16px 28px;
+  text-align: center;
+}
+.mouse-hero h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-family: Greed, Arial, sans-serif;
+  font-size: clamp(46px, 12.4vw, 66px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+.mouse-best-word {
+  position: relative;
+  display: inline-block;
+}
+.mouse-hero-note {
+  position: absolute;
+  bottom: 90%;
+  left: -0.85em;
+  z-index: 3;
+  font-family:
+    Bradley Hand,
+    Segoe Print,
+    Comic Sans MS,
+    cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transform: rotate(-9deg);
+}
+/* Proofreader's caret: sits on the headline's baseline in the gap before "best", pointing up at the note. */
+.mouse-best-word:before {
+  content: "^";
+  position: absolute;
+  top: 86%;
+  left: -0.5em;
+  font-family:
+    Bradley Hand,
+    Segoe Print,
+    Comic Sans MS,
+    cursive;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  transform: rotate(-7deg);
+}
+.mouse-hero-sub {
+  position: relative;
+  z-index: 2;
+  margin: 22px 0 2px;
+  font-family: Greed, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+.mouse-letter-mouse {
+  position: absolute;
+  height: auto;
+  object-fit: contain;
+}
+.mouse-sub-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: calc(100% + 32px);
+  max-width: 500px;
+  margin: 18px -16px 46px;
+}
+.mouse-chase {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.mouse-chase img {
+  position: absolute;
+  height: auto;
+  object-fit: contain;
+}
+.mouse-chase-cat {
+  bottom: -10px;
+  left: 0;
+  width: clamp(100px, 27vw, 130px);
+}
+.mouse-chase-mouse {
+  right: 0;
+  bottom: -10px;
+  width: clamp(115px, 30vw, 145px);
+}
+.mouse-chase .mouse-chase-cat-full,
+.mouse-chase .mouse-chase-mouse-full {
+  display: none;
+}
+.mouse-natural-diet {
+  margin: 0 0 14px;
+  padding: 4px 16px;
+  background: var(--mouse-ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.mouse-benefits {
+  display: flex;
+  width: min(100%, 480px);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.mouse-benefits > div:last-child {
+  max-width: 100%;
+}
+.mouse-thrive {
+  margin: 18px 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.mouse-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 18px;
+  font-size: 12px;
+}
+.mouse-rating img {
+  width: 112px;
+  height: auto;
+}
+.mouse-cta {
+  width: min(100%, 430px);
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--mouse-ink);
+  color: #fff;
+  cursor: pointer;
+  font-family: Greed, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    transform 0.16s ease,
+    background 0.16s ease;
+}
+/* Mouse peeking in from the right (mirrored), fingertip just under the after-letter button's bottom-right end.
+   On phones it runs off the screen edge (.mouse-page clips it). */
+.mouse-cta {
+  position: relative;
+}
+.mouse-cta-pointer {
+  position: absolute;
+  top: 4px;
+  right: -30px;
+  width: 76px;
+  height: auto;
+  transform: scaleX(-1);
+  pointer-events: none;
+}
+.mouse-cta:hover {
+  background: #3a3536;
+  transform: translateY(-1px);
+}
+.mouse-cta:active {
+  transform: translateY(1px);
+}
+.mouse-cta-note {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+.mouse-letter-section {
+  position: relative;
+  padding: 30px 14px 42px;
+  background: var(--mouse-sand);
+}
+/* Size, line-height and letter-spacing come from .section-heading, shared with the page's other section headlines. */
+.mouse-letter-section > h2 {
+  width: min(100%, 650px);
+  /* Leaves headroom for the mouse peeking over the letter, however the headline wraps. */
+  margin: 0 auto 46px;
+  font-family: Greed, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+/* The body's flat cut sits ~59% of the image width below its top: offset by that to rest it on the letter's edge. */
+.mouse-letter-mouse {
+  top: -40px;
+  right: 12px;
+  width: 68px;
+  z-index: 2;
+}
+.mouse-letter {
+  position: relative;
+  width: min(100%, 650px);
+  margin: 0 auto;
+  padding: 26px 20px 34px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(35, 31, 32, 0.08);
+  font-family:
+    Bradley Hand,
+    Segoe Print,
+    Comic Sans MS,
+    cursive;
+  font-size: clamp(21px, 5.5vw, 27px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+.mouse-letter p {
+  margin: 0 0 29px;
+}
+.mouse-letter ul {
+  margin: -12px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+.mouse-letter li:before {
+  content: "- ";
+}
+.mouse-letter-list {
+  line-height: 1.02;
+}
+/* Mouse paw-print bullets, tilted alternately like a trail of footsteps. */
+.mouse-letter .mouse-letter-paws {
+  margin: 0 0 29px;
+}
+.mouse-letter .mouse-letter-paws li {
+  position: relative;
+  padding-left: 1.05em;
+}
+.mouse-letter .mouse-letter-paws li + li {
+  margin-top: 0.22em;
+}
+.mouse-letter .mouse-letter-paws li:before {
+  content: "";
+  position: absolute;
+  top: 0.14em;
+  left: 0.12em;
+  width: 0.48em;
+  height: 0.7em;
+  background: url("https://neeuv3c4wu4qzcdw.public.blob.vercel-storage.com/katkin/mouse-lp/mouse-paw-print.png") center /
+    contain no-repeat;
+  transform: rotate(-12deg);
+}
+.mouse-letter .mouse-letter-paws li:nth-child(even):before {
+  transform: rotate(12deg);
+}
+/* A quick diagonal pencil line through a word, as if the mouse crossed it out itself. */
+.mouse-pencil-strike {
+  position: relative;
+  text-decoration: none;
+}
+.mouse-pencil-strike:after {
+  content: "";
+  position: absolute;
+  top: -6%;
+  bottom: -2%;
+  left: -6%;
+  right: -10%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M4 92 C 30 70, 62 38, 96 8' fill='none' stroke='%23444' stroke-opacity='.8' stroke-width='1.8' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M8 95 C 36 70, 66 40, 94 13' fill='none' stroke='%23555' stroke-opacity='.4' stroke-width='1.1' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E")
+    center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+.mouse-letter-link {
+  display: block;
+  margin: -8px 0 28px;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid;
+  background: transparent;
+  color: #0b57d0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+}
+.mouse-letter-link:hover {
+  opacity: 0.7;
+}
+.mouse-letter-inline-link {
+  color: #0b57d0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mouse-letter-inline-link:hover {
+  opacity: 0.7;
+}
+/* A zero-size anchor at the end of "Bye!"; the trail hangs off it, walking right and down past the letter's bottom edge. */
+.mouse-paw-trail {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+.mouse-paw-trail img {
+  position: absolute;
+  top: -0.55em;
+  left: 0.85em;
+  width: 285px;
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+}
+.mouse-mid-cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 20px 32px;
+  background: var(--mouse-cream);
+}
+.mouse-proof-intro {
+  padding: 26px 20px 30px;
+  background: #fff;
+  text-align: center;
+}
+.mouse-proof-intro p {
+  margin: 0 0 18px;
+  font-family:
+    Bradley Hand,
+    Segoe Print,
+    Comic Sans MS,
+    cursive;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+/* Highlighter-pen stroke in brand chartreuse: ragged, slightly uneven ink; each wrapped line gets its own stroke. */
+.mouse-highlight {
+  margin: 0 -0.25em;
+  padding: 0.05em 0.3em 0.12em;
+  border-radius: 0.8em 0.3em 0.9em 0.25em;
+  color: inherit;
+  background: transparent;
+  background-image:
+    linear-gradient(
+      100deg,
+      rgba(213, 231, 9, 0) 0.5%,
+      rgba(213, 231, 9, 0.9) 2.5%,
+      rgba(213, 231, 9, 0.75) 50%,
+      rgba(213, 231, 9, 0.9) 96%,
+      rgba(213, 231, 9, 0) 99%
+    ),
+    linear-gradient(183deg, rgba(213, 231, 9, 0) 0%, rgba(213, 231, 9, 0.35) 8%, rgba(213, 231, 9, 0) 16%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.mouse-proof-intro h2 {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: Greed, Arial, sans-serif;
+  font-weight: 700;
+}
+.mouse-proof {
+  background: #fff;
+}
+.mouse-proof > div {
+  margin-top: 0;
+  border-radius: 0;
+}
+@media (min-width: 700px) {
+  .mouse-nav {
+    height: 60px;
+    padding-inline: 32px;
+  }
+  .mouse-nav img {
+    height: 38px;
+  }
+  .mouse-hero {
+    padding: 176px 20px 56px;
+  }
+  .mouse-hero-note {
+    font-size: 34px;
+  }
+  .mouse-hero-sub {
+    margin: 34px 0 10px;
+    font-size: 23px;
+  }
+  .mouse-sub-row {
+    width: 100%;
+    max-width: 720px;
+    margin: 20px 0 62px;
+  }
+  .mouse-chase .mouse-chase-cat,
+  .mouse-chase .mouse-chase-mouse {
+    display: none;
+  }
+  /* The full artwork has an opaque white background; multiply drops it out against the cream. */
+  .mouse-chase .mouse-chase-cat-full,
+  .mouse-chase .mouse-chase-mouse-full {
+    display: block;
+    bottom: -14px;
+    width: auto;
+    height: 130px;
+    mix-blend-mode: multiply;
+  }
+  .mouse-chase-cat-full {
+    left: 0;
+  }
+  .mouse-chase-mouse-full {
+    right: 0;
+  }
+  .mouse-cta-pointer {
+    top: -2px;
+    right: -63px;
+    width: 90px;
+  }
+  .mouse-letter-section {
+    padding: 54px 30px 64px;
+  }
+  .mouse-letter {
+    padding: 42px 48px 52px;
+  }
+  .mouse-letter-section > h2 {
+    margin-bottom: 66px;
+  }
+  .mouse-paw-trail img {
+    width: 420px;
+  }
+  .mouse-letter-mouse {
+    top: -60px;
+    right: 28px;
+    width: 102px;
+  }
+}
+@media (min-width: 1024px) {
+  .mouse-nav {
+    height: 70px;
+  }
+  .mouse-hero {
+    padding: 172px 40px 64px;
+  }
+  .mouse-hero h1 {
+    font-size: 80px;
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+  }
+  .mouse-hero-note {
+    font-size: 40px;
+  }
+  .mouse-best-word:before {
+    font-size: 34px;
+  }
+  .mouse-hero-sub {
+    margin: 32px 0 6px;
+    font-size: 27px;
+  }
+  .mouse-sub-row {
+    max-width: 900px;
+    margin-top: 26px;
+    margin-bottom: 72px;
+  }
+  .mouse-chase .mouse-chase-cat-full,
+  .mouse-chase .mouse-chase-mouse-full {
+    bottom: -18px;
+    height: 170px;
+  }
+  .mouse-natural-diet {
+    margin-bottom: 18px;
+    padding: 6px 22px;
+    font-size: 16px;
+  }
+  .mouse-benefits {
+    width: min(100%, 700px);
+    gap: 12px;
+  }
+  .mouse-thrive {
+    margin: 24px 0 14px;
+    font-size: 18px;
+  }
+  .mouse-rating {
+    gap: 7px;
+    margin-bottom: 26px;
+    font-size: 14px;
+  }
+  .mouse-rating img {
+    width: 132px;
+  }
+  .mouse-cta {
+    width: min(100%, 520px);
+    min-height: 58px;
+  }
+  .mouse-cta-pointer {
+    top: 1px;
+    right: -79px;
+    width: 110px;
+  }
+  .mouse-cta-note {
+    margin-top: 9px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) and (max-height: 1000px) {
+  .mouse-hero {
+    padding: 152px 32px 24px;
+  }
+  .mouse-hero h1 {
+    font-size: 54px;
+    line-height: 0.94;
+  }
+  .mouse-hero-note {
+    font-size: 29px;
+  }
+  .mouse-best-word:before {
+    font-size: 25px;
+  }
+  .mouse-hero-sub {
+    margin: 16px 0 0;
+    font-size: 19px;
+    line-height: 1.3;
+  }
+  .mouse-sub-row {
+    max-width: 680px;
+    margin-top: 14px;
+    margin-bottom: 42px;
+  }
+  .mouse-chase .mouse-chase-cat-full,
+  .mouse-chase .mouse-chase-mouse-full {
+    bottom: -12px;
+    height: 104px;
+  }
+  .mouse-natural-diet {
+    margin-bottom: 8px;
+    padding: 4px 16px;
+    font-size: 13px;
+  }
+  .mouse-benefits {
+    width: min(100%, 900px);
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .mouse-thrive {
+    margin: 12px 0 7px;
+    font-size: 14px;
+  }
+  .mouse-rating {
+    flex-direction: row;
+    gap: 7px;
+    margin-bottom: 11px;
+    font-size: 12px;
+  }
+  .mouse-rating img {
+    width: 98px;
+  }
+  .mouse-cta {
+    width: min(100%, 480px);
+    min-height: 48px;
+  }
+  .mouse-cta-pointer {
+    top: 0;
+    right: -56px;
+    width: 80px;
+  }
+  .mouse-cta-note {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mouse-cta {
+    transition: none;
+  }
+}

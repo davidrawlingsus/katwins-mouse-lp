@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# Source drawings and the handover bundle (zip, Word doc) aren't part of the code.
+images/
+handover/
+
+# KatKin's licensed brand fonts: not redistributed here. Copy them from the /lps app's public/fonts to run locally.
+public/fonts/

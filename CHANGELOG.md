@@ -129,7 +129,7 @@ They live in `app/mouse-lp/sections/`.
 ### Mouse paw-print bullets on the "100% real meat" list
 - **Before:** one `<p class="mouse-letter-list">` with the eight lines separated by `<br>`s.
 - **After:** a `<ul class="mouse-letter-list mouse-letter-paws">` with one `<li>` per line ("100% real meat", "0% filler",
-  "Moisture.", "Muscle.", "Organs.", "Everything.", "In just the right proportions.", "In made-to-measure trays.").
+  "Moisture", "Muscle", "Organs", "Everything", "In just the right proportions", "In made-to-measure trays"), with no full stops (the original ended six of them with one).
 - Each item gets a mouse paw-print bullet (`.mouse-letter-paws li:before`, a background image), sized in `em` so it
   scales with the letter text. Bullets tilt -12° and +12° alternately, like a trail of footsteps. Bullets are
   `0.48em × 0.7em`. Items have `padding-left: 1.05em` and `0.22em` between them.

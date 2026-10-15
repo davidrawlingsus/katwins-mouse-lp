@@ -179,12 +179,12 @@ function MouseLanding() {
             <ul className="mouse-letter-list mouse-letter-paws">
               <li>100% real meat</li>
               <li>0% filler</li>
-              <li>Moisture.</li>
-              <li>Muscle.</li>
-              <li>Organs.</li>
-              <li>Everything.</li>
-              <li>In just the right proportions.</li>
-              <li>In made-to-measure trays.</li>
+              <li>Moisture</li>
+              <li>Muscle</li>
+              <li>Organs</li>
+              <li>Everything</li>
+              <li>In just the right proportions</li>
+              <li>In made-to-measure trays</li>
             </ul>
             <p>It&apos;s even gently steamed to keep as much goodness as possible.</p>
             <p>

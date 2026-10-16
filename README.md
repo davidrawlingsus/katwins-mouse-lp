@@ -21,7 +21,7 @@ CTAs go to `katkin.com/sign-up/fresh` (relative `/sign-up/fresh` in production),
 
 ## Preview
 
-Live preview: https://mouse-lp-production.up.railway.app (Railway project **KatWins**, service `mouse-lp`). It redirects
+Live preview: https://katwins.com (also https://mouse-lp-production.up.railway.app; Railway project **KatWins**, service `mouse-lp`). It redirects
 to `/lps/mouse-lp`; that redirect lives in `next.config.ts` and is for the preview only. Redeploy after changes with:
 
 ```bash

@@ -60,7 +60,12 @@ They live in `app/mouse-lp/sections/`.
   in the gap between "world's" and "best", pointing up at "Second". Its size at each breakpoint is unchanged.
 
 ### Handwritten "Second" moved left
-- `.mouse-hero-note` `left: -0.6em` → `-0.85em`.
+- `.mouse-hero-note` `left: -0.6em` → `calc(-0.85em - 20px)`.
+
+### More space between the offer banner and "Second"
+- **Before:** "Second" sat about 2px under the pink offer banner on phones and shorter desktops (11px on tall desktops).
+- **After:** about 24px at every size. `.mouse-hero` top padding: `124px` → `146px` (phone), `172px` → `185px`
+  (1024px+), `152px` → `174px` (1024px+ and 1000px tall or less). Tablet (700px+, already 30px) is unchanged.
 
 ### Cat and mouse now flank the sub-heading
 - **Before:** the cat and mouse sat on a row of their own beneath "(First best has a tail). Squeak.", with empty space

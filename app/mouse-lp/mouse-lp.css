@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 124px 16px 28px;
+  padding: 146px 16px 28px;
   text-align: center;
 }
 .mouse-hero h1 {
@@ -68,7 +68,7 @@
 .mouse-hero-note {
   position: absolute;
   bottom: 90%;
-  left: -0.85em;
+  left: calc(-0.85em - 20px);
   z-index: 3;
   font-family:
     Bradley Hand,
@@ -484,7 +484,7 @@
     height: 70px;
   }
   .mouse-hero {
-    padding: 172px 40px 64px;
+    padding: 185px 40px 64px;
   }
   .mouse-hero h1 {
     font-size: 80px;
@@ -548,7 +548,7 @@
 }
 @media (min-width: 1024px) and (max-height: 1000px) {
   .mouse-hero {
-    padding: 152px 32px 24px;
+    padding: 174px 32px 24px;
   }
   .mouse-hero h1 {
     font-size: 54px;
